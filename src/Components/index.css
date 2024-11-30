@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.logo-name {
+  font-family: "Agustina Regular";
+  font-weight: bold;
+  padding: 0 5px;
+  text-decoration: none;
+  /* color: #55198b; */
+}  
+@media screen and (min-width: 768px){
+  .logo-name{
+    font-size: large;
+  }
+}
+@media screen and (max-width: 450px){
+  .logo-name{
+    font-size: small;
+  }
+}
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar {
+  height: 60px;
+  background-color: rgb(14, 26, 45);
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  border-bottom: 1pt solid cyan;
+}
+.menu-icon {
+  display: none;
+}
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.nav-elements ul li:not(:last-child) {
+  margin-right: 20px;
+}
+.nav-item-link{
+    padding-top: 20px;
+}
+.dropdown-item-hover{
+   padding-bottom: 10px;
+   width: 200px;
+}
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fcfcfc;
+  text-decoration: none;
+}
+.nav-item-link.active{
+  font-weight: 500 !important;
+  position: relative;
+}
+.nav-item-link.active::after {
+    content: '';
+  position: absolute;
+  bottom: 0px;
+  height: 2px;
+  width: 100%;
+  left: 0px;
+  background-color: #fcfcfc;
+  }
+
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #0F131A;
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    z-index: 100;
+  }
+  
+  .nav-elements.active {
+    width: 170px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+}
+.notification-item{
+  background-color: '#292d33';
+  border-bottom: '1px solid white';
+  cursor: 'pointer',
+}
+.notification-item:hover{
+  background-color: #0F131A;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Hide horizontal scrollbar */
+::-webkit-scrollbar-horizontal {
+  display: none;
+}
+
+/* Hide scrollbar track */
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Hide scrollbar handle */
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+/* Hide scrollbar corner */
+::-webkit-scrollbar-corner {
+  display: none;
+}
+.rs-sidebar {
+  height: 100vh;
+}
+.page-container {
+  padding-left: 260px;
+  transition: padding 0.8s;
+  &.container-full {
+    padding-left: 60px;
+  }
+}  
+.rs-sidebar {
+  background: rgb(14, 26, 45);
+
+}
+.nav-toggle {
+  border-top: 1pt solid #ddd;
+  background-color: rgb(14, 26, 45) !important;
+  position: fixed;
+  bottom: 0;
+  opacity: 1;
+}
+.rs-dropdown-item>.rs-icon {
+margin-right: 20px;
+}
+.rs-active-link {
+font-weight: bold !important;
+color: #007bff !important; /* Or another color */
+}
+.dashboard-header .rs-panel {
+  color: #fff;
+}
+
+.dashboard-header .chart-img {
+  width: 100px;
+  position: absolute;
+  left: 26px;
+  top: 34px;
+  opacity: 0.5;
+}
+.dashboard-header .rs-col {
+  margin-top: 10px;
+}
+.dashboard-header .trend-box .rs-panel-body {
+  text-align: right;
+}
+
+.dashboard-header .trend-box .rs-panel-body .value {
+  font-size: 36px;
+}
+
+.ct-label {
+  color: #7e7c7c;
+}
+
+.ct-series-a .ct-bar,
+.ct-series-a .ct-slice-donut,
+.ct-series-a .ct-line,
+.ct-series-a .ct-point {
+  stroke: #363434;
+}
+
+.ct-grid {
+  stroke: hsla(0, 0%, 100%, 0.2);
+}
+
+.colorful-chart {
+  color: #2d2c2c;
+  margin-top: 30px;
+  border-radius: 6px;
+}
+
+.colorful-chart h3 {
+  line-height: 22px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  font-size: 18px;
+}
+.ct-chart-magenta {
+  background: linear-gradient(60deg, #ec407a, #d81b60);
+}
+
+.ct-chart-orange {
+  background: linear-gradient(60deg, #ffa726, #fb8c00);
+}
+
+.ct-chart-azure {
+  background: linear-gradient(60deg, #26c6da, #00acc1);
+}
+
+.card {
+  background-color: #353636 ;
+  margin-top: 30px;
+  border-radius: 6px;
+}
+.card h3 {
+  line-height: 22px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.apexcharts-tooltip.apexcharts-theme-light{
+  color: #161616;
+}
+.bg-gradient-orange {
+  background: linear-gradient(87deg, #fb6340 0, #fbb140 100%);
+}
+.bg-gradient-red {
+  background: linear-gradient(87deg, #f5365c 0, #f56036 100%);
+}
+.bg-gradient-green {
+  background: linear-gradient(87deg, #2dce89 0, #2dcecc 100%);
+}
+.bg-gradient-blue {
+  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%);
+}
+.bg-gradient-purple {
+  background: linear-gradient(87deg, #7953d2 0, #9561d2 100%);
+}
+.bg-gradient-teal {
+  background: linear-gradient(87deg, #2b3940 0, #415661 100%);
+}
+.bg-gradient-yellow {
+  background: linear-gradient(87deg, #ffd600 0, #fb8c00 100%);
+}
+.bg-gradient-indigo {
+  background: linear-gradient(87deg, #6574cd 0, #7e8ce0 100%);
+}
+.bg-gradient-deep-purple {
+  background: linear-gradient(87deg, #5c258d 0, #8d6dc4 100%);
+}
+.bg-gradient-cyan {
+  background: linear-gradient(87deg, #2baba2 0, #3bb1b0 100%);
+}
+.bg-gradient-pink {
+  background: linear-gradient(87deg, #f5365c 0, #fb6340 100%);
+}
+.bg-gradient-brown {
+  background: linear-gradient(87deg, #4e342e 0, #6d4c41 100%);
+}
+.bg-gradient-amber {
+  background: linear-gradient(87deg, #ff8c00 0, #ffcd00 100%);
+}
+.reactCountriesFlags{
+  display: block;
+}
+/* CaregiverDetailsPage.css */
+.caregiver-details-page {
+  padding: 20px;
+}
+
+.caregiver-panel, .patient-panel {
+   border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.panel-icon {
+  margin-right: 8px;
+  color: #4caf50;  /* Green color for icons */
+}
+
+.no-patient-panel {
+   text-align: center;
+  font-style: italic;
+}
+
+.rs-button {
+  font-size: 16px;
+  padding: 12px;
+}
+
+.rs-icon {
+  font-size: 20px;
+}
